@@ -11,21 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.file_field :images, multiple: true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :string %>
-    <%= form.text_field :string %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <table class="table">
+      <tr>
+        <td>ユーザー名</td>
+        <td class="text-left">
+            <%= form.text_field :name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          紹介動画
+        </td>
+        <td class="text-left">
+            <%= form.file_field :movie %>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="text-right">
+          <div class="actions">
+            <%= form.submit %>
+          </div>
+        </td>
+      </tr>
+  </table>
 <% end %>
