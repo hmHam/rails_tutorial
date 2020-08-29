@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>画像</strong>
+  <% @user.images.each do |image| %>
+    <%= video_tag(url_for(image), :controls => true) %>
+  <% end %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @user.string %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
